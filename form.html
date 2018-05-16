@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="uft-8"/>
+<title> Form sign up for github </title>
+<style type="text/css">
+	lable{
+		float:left;
+		width: 100px;
+	}
+	  input{
+	  	margin-bottom: 5px;
+	  }
+	  .error{
+	  	color:red;
+	  }
+</style>
+<script type="text/javascript">
+	function getInfo()
+	{
+		var fullname= document.getElementById("fullname").value;
+		var mail    = document.getElementById("mail").value;
+		var Password= document.getElementById("Password").value;
+		if (fullname==" "){
+			document.getElementById("errorname").innerHTML ="Ban chua nhap ten";
+		}
+		else{
+			document.getElementById("errorname").innerHTML=" ";
+		}
+		if (mail==""){
+			document.getElementById("errormail").innerHTML="Ban chua nhap mail";
+		}
+		else{
+			document.getElementById("errormail").innerHTML=" ";
+		}
+		if (Password==""){
+			document.getElementById("errorpassword").innerHTML="Ban chua nhap mat khau";
+		}
+		else{
+			document.getElementById("errorpassword").innerHTML=" ";
+		}
+	}
+</script>
+</head>
+<body>
+  <form action="" method="post">
+      <label> Full name </label>
+      <input  type="text" name="full name" id="full name" value="">
+      <span id="errorname" class="error"></span>
+      <br/>
+      <label> Mail </label>
+      <input  type="text" name="mail" id="mail" value="">
+       <span id="errormail" class="error"></span>
+      <br/>
+      <label> Password </label>
+      <input  type="text" name="Password" id="Password" value="">
+       <span id="errorpassword" class="error"></span>
+      <br/>
+      <button onclick="getInfo(); return false;"> Sign up for GitHub</button>
+  </form>
+  <div id="kq"></div>
+</body>
+</html>
+ 
